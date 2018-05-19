@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:n1="http://schemas.android.com/apk/res/android"
+    n1:layout_width="fill_parent"
+    n1:layout_height="fill_parent"
+    n1:orientation="vertical">
+    <include layout="@layout/toolbar_general" />
+    <ScrollView
+        n1:layout_width="fill_parent"
+        n1:layout_height="0.0dip"
+        n1:layout_weight="1.0"
+        n1:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            n1:id="@+id/mainConstraintLayout"
+            n1:layout_width="fill_parent"
+            n1:layout_height="wrap_content"
+            n1:background="@color/white"
+            n1:paddingTop="16.0dip">
+
+            <android.support.design.widget.TextInputLayout xmlns:n2="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/nameLayout"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="16.0dip"
+                n1:layout_marginRight="16.0dip"
+                n1:layout_marginTop="16.0dip"
+                n2:layout_constraintEnd_toEndOf="parent"
+                n2:layout_constraintStart_toStartOf="parent">
+                <android.support.design.widget.TextInputEditText
+                    n1:id="@+id/docter_input_name"
+                    n1:layout_width="fill_parent"
+                    n1:layout_height="wrap_content"
+                    n1:hint="Name"
+                    n1:imeOptions="actionNext"
+                    n1:inputType="text"
+                    n1:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout xmlns:n3="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/dobLayout"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="16.0dip"
+                n1:layout_marginRight="16.0dip"
+                n1:layout_marginTop="16.0dip"
+                n3:layout_constraintEnd_toEndOf="parent"
+                n3:layout_constraintStart_toStartOf="parent"
+                n3:layout_constraintTop_toBottomOf="@id/nameLayout">
+                <android.support.design.widget.TextInputEditText
+                    n1:id="@+id/docter_input_dob"
+                    n1:layout_width="fill_parent"
+                    n1:layout_height="wrap_content"
+                    n1:hint="Ngày Sinh"
+                    n1:imeOptions="actionNext"
+                    n1:inputType="date"
+                    n1:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout xmlns:n4="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/sexLayout"
+                n1:layout_width="match_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="20dp"
+                n4:layout_constraintEnd_toEndOf="parent"
+                n4:layout_constraintStart_toStartOf="parent"
+                n4:layout_constraintTop_toBottomOf="@id/dobLayout">
+                <RadioGroup
+                    n1:id="@+id/gender_radio_group_docter"
+                    n1:layout_width="wrap_content"
+                    n1:layout_height="wrap_content"
+                    n1:orientation="horizontal">
+                    <RadioButton
+                        n1:id="@+id/male_radio_btn"
+                        n1:layout_width="wrap_content"
+                        n1:layout_height="wrap_content"
+                        n1:text="@string/male"
+                        n1:checked="true"
+                        />
+                    <RadioButton
+                        n1:id="@+id/female_radio_btn_docter"
+                        n1:layout_width="wrap_content"
+                        n1:layout_height="wrap_content"
+                        n1:text = "@string/female"
+                        />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout xmlns:n5="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/infoLayout"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="16.0dip"
+                n1:layout_marginRight="16.0dip"
+                n1:layout_marginTop="16.0dip"
+                n5:layout_constraintEnd_toEndOf="parent"
+                n5:layout_constraintStart_toStartOf="parent"
+                n5:layout_constraintTop_toBottomOf="@id/sexLayout">
+                <android.support.design.widget.TextInputEditText
+                    n1:id="@+id/docter_input_info_p"
+                    n1:layout_width="fill_parent"
+                    n1:layout_height="wrap_content"
+                    n1:hint="Thông tin mô tả"
+                    n1:imeOptions="actionNext"
+                    n1:inputType="text"
+                    n1:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout xmlns:n6="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/hospitalLayout"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="16.0dip"
+                n1:layout_marginRight="16.0dip"
+                n1:layout_marginTop="16.0dip"
+                n6:layout_constraintEnd_toEndOf="parent"
+                n6:layout_constraintStart_toStartOf="parent"
+                n6:layout_constraintTop_toBottomOf="@id/infoLayout">
+                <android.support.design.widget.TextInputEditText
+                    n1:id="@+id/docter_input_hospital"
+                    n1:layout_width="fill_parent"
+                    n1:layout_height="wrap_content"
+                    n1:hint="Nời công tác"
+                    n1:imeOptions="actionNext"
+                    n1:inputType="text"
+                    n1:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout xmlns:n7="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/yearLayout"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="16.0dip"
+                n1:layout_marginRight="16.0dip"
+                n1:layout_marginTop="16.0dip"
+                n7:layout_constraintEnd_toEndOf="parent"
+                n7:layout_constraintStart_toStartOf="parent"
+                n7:layout_constraintTop_toBottomOf="@id/hospitalLayout">
+                <android.support.design.widget.TextInputEditText
+                    n1:id="@+id/docter_input_year"
+                    n1:layout_width="fill_parent"
+                    n1:layout_height="wrap_content"
+                    n1:hint="Mã số NV"
+                    n1:imeOptions="actionNext"
+                    n1:inputType="text"
+                    n1:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout xmlns:n8="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/addressLayout"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="16.0dip"
+                n1:layout_marginRight="16.0dip"
+                n1:layout_marginTop="16.0dip"
+                n8:layout_constraintEnd_toEndOf="parent"
+                n8:layout_constraintStart_toStartOf="parent"
+                n8:layout_constraintTop_toBottomOf="@id/yearLayout">
+                <android.support.design.widget.TextInputEditText
+                    n1:id="@+id/docter_input_address"
+                    n1:layout_width="fill_parent"
+                    n1:layout_height="wrap_content"
+                    n1:hint="Địa chỉ"
+                    n1:imeOptions="actionNext"
+                    n1:inputType="text"
+                    n1:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout xmlns:n9="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/locationLayout"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:layout_marginLeft="16.0dip"
+                n1:layout_marginRight="16.0dip"
+                n1:layout_marginTop="16.0dip"
+                n9:layout_constraintEnd_toEndOf="parent"
+                n9:layout_constraintStart_toStartOf="parent"
+                n9:layout_constraintTop_toBottomOf="@id/addressLayout">
+                <android.support.design.widget.TextInputEditText
+                    n1:id="@+id/docter_input_location"
+                    n1:layout_width="fill_parent"
+                    n1:layout_height="wrap_content"
+                    n1:hint="Vị trí của bạn"
+                    n1:imeOptions="actionNext"
+                    n1:inputType="text"
+                    n1:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button xmlns:n10="http://schemas.android.com/apk/res-auto"
+                n1:id="@+id/btn_save_info_docter"
+                n1:layout_width="fill_parent"
+                n1:layout_height="wrap_content"
+                n1:text="Cập nhập thông tin"
+                n1:background="@color/login_button_background"
+                n1:layout_marginTop="16dp"
+                n1:textColor="@android:color/white"
+                n10:layout_constraintEnd_toEndOf="parent"
+                n10:layout_constraintStart_toStartOf="parent"
+                n10:layout_constraintTop_toBottomOf="@id/locationLayout" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

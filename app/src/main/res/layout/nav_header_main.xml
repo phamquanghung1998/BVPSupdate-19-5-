@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_screen1"
+    android:padding="@dimen/padding_big">
+
+    <ImageView
+        android:id="@+id/imageViewNav"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="@dimen/padding_big"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        app:srcCompat="@drawable/icon_nav_header" />
+
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/padding_big"
+        android:layout_toRightOf="@id/imageViewNav"
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/white"
+        android:text="loadding..." />
+
+    <TextView
+        android:id="@+id/textView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_name"
+        android:layout_toEndOf="@+id/imageViewNav"
+        android:layout_toRightOf="@+id/imageViewNav"
+        android:layout_marginLeft="@dimen/padding_big"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:text=""/>
+</RelativeLayout>

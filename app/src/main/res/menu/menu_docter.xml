@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings_docter"
+        android:orderInCategory="100"
+        android:title="Thông tin"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_docter_logout"
+        android:orderInCategory="100"
+        android:title="@string/action_logout_docter"
+        app:showAsAction="never" />
+</menu>

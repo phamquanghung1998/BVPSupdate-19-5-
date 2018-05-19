@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_gray_border"
+    android:padding="@dimen/padding_big">
+
+    <ImageView
+        android:id="@+id/ivItem_pic"
+        android:layout_width="@dimen/list_item_icon"
+        android:layout_height="@dimen/list_item_icon"
+        android:src="@drawable/icon_docter" />
+
+    <TextView
+        android:id="@+id/tvItem_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_big"
+        android:layout_toRightOf="@id/ivItem_pic"
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/black"
+        android:text="loadding..." />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:layout_toRightOf="@id/tvItem_name">
+        <ImageView
+            android:id="@+id/ivstar1"
+            android:layout_width="@dimen/item_icon_star"
+            android:layout_height="@dimen/item_icon_star"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:src="@drawable/ic_start" />
+        <ImageView
+            android:id="@+id/ivstar2"
+            android:layout_width="@dimen/item_icon_star"
+            android:layout_height="@dimen/item_icon_star"
+            android:layout_toRightOf="@id/ivstar1"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:src="@drawable/ic_start" />
+        <ImageView
+            android:id="@+id/ivstar3"
+            android:layout_width="@dimen/item_icon_star"
+            android:layout_height="@dimen/item_icon_star"
+            android:layout_toRightOf="@id/ivstar2"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:src="@drawable/ic_start" />
+        <ImageView
+            android:id="@+id/ivstar4"
+            android:layout_width="@dimen/item_icon_star"
+            android:layout_height="@dimen/item_icon_star"
+            android:layout_toRightOf="@id/ivstar3"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:src="@drawable/ic_start" />
+        <ImageView
+            android:id="@+id/ivstar5"
+            android:layout_width="@dimen/item_icon_star"
+            android:layout_height="@dimen/item_icon_star"
+            android:layout_toRightOf="@id/ivstar4"
+            android:layout_marginLeft="@dimen/padding_normal"
+            android:src="@drawable/ic_start" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvItem_dec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvItem_name"
+        android:layout_toEndOf="@+id/ivItem_pic"
+        android:layout_toRightOf="@+id/ivItem_pic"
+        android:layout_marginLeft="@dimen/padding_big"
+        android:textColor="@color/grey"
+        android:textSize="@dimen/text_size_medium"
+        android:text=""/>
+
+    <LinearLayout
+        android:id="@+id/llStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/padding_normal2"
+        android:padding="@dimen/padding_small"
+        android:background="@drawable/choxacnhan_backgroud"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Chờ xác nhận" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvItem_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_size_tiny"
+        android:textColor="@color/grey_light"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

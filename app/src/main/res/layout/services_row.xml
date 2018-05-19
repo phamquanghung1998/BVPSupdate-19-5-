@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_gray_border"
+    android:padding="@dimen/padding_big">
+
+    <TextView
+        android:id="@+id/tvUnit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_big"
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/black"
+        android:text="loadding..." />
+
+    <TextView
+        android:id="@+id/tvUnit_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 đ"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/text_size_big"
+        android:textColor="@color/green"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

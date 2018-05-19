@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:id="@+id/grp1" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_booking"
+            android:icon="@drawable/ic_lich_su"
+            android:title="Lịch sử đặt" />
+    </group>
+
+    <group android:id="@+id/grp2" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_info"
+            android:icon="@drawable/ic_thong_tin"
+            android:title="Thông tin" />
+    </group>
+
+    <group android:id="@+id/grp3" android:checkableBehavior="single" >
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_chia_se"
+            android:title="Chia sẻ" />
+    </group>
+    <group android:id="@+id/grp4" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_thoat"
+            android:title="Thoát" />
+    </group>
+</menu>
