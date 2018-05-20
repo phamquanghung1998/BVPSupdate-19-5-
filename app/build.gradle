@@ -1,16 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-
     configurations {
         all*.exclude group: 'com.android.support', module: 'support-v4'
         all*.exclude group: 'com.android.support', module: 'support-annotations'
     }
-
     compileSdkVersion 26
     defaultConfig {
         applicationId "vn.ithanh.udocter"
-        minSdkVersion 16
+        minSdkVersion 24
         targetSdkVersion 26
         versionCode 8
         versionName "1.0.8"
@@ -24,10 +22,6 @@ android {
         }
 
     }
-
-
-
-
     buildTypes {
         release {
             minifyEnabled false
@@ -35,15 +29,15 @@ android {
         }
 
     }
-
-
-
     externalNativeBuild {
         cmake {
             path "CMakeLists.txt"
         }
     }
     useLibrary 'org.apache.http.legacy'
+    buildToolsVersion '23.0.1'
+    productFlavors {
+    }
 }
 
 dependencies {
@@ -53,40 +47,57 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-
     implementation 'com.google.code.gson:gson:2.8.0'
     implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-
     implementation 'com.google.android.gms:play-services-maps:11.8.0'
     implementation 'com.google.android.gms:play-services-auth:11.8.0'
     implementation 'com.google.android.gms:play-services-places:11.8.0'
-
     implementation 'com.android.support:cardview-v7:26.1.0'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
     implementation 'de.hdodenhof:circleimageview:1.3.0'
-
     implementation 'com.facebook.android:facebook-login:[4,5)'
     implementation 'com.github.jd-alexander:library:1.1.0'
 
-//    implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    implementation 'com.android.support:design:26.1.0'
-//    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
-//
-//
-//    testImplementation 'junit:junit:4.12'
-//    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-//    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-//    compile 'com.google.code.gson:gson:2.8.0'
-//    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-//
-//    implementation 'com.android.support:cardview-v7:26.1.0'
-//    implementation 'com.github.bumptech.glide:glide:3.7.0'
-//    implementation 'de.hdodenhof:circleimageview:1.3.0'
-//
-//    implementation 'com.facebook.android:facebook-login:4.28.0'
-//
-//    compile 'com.google.android.gms:play-services:11.8.0'
-//    implementation 'com.github.jd-alexander:library:1.1.0'
-//    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
-//    compile 'com.mikhaellopez:circularimageview:3.0.2'
+    //    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //    implementation 'com.android.support:design:26.1.0'
+
+    //    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //
+
+    //
+
+    //    testImplementation 'junit:junit:4.12'
+
+    //    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+
+    //    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    //    compile 'com.google.code.gson:gson:2.8.0'
+
+    //    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    //
+
+    //    implementation 'com.android.support:cardview-v7:26.1.0'
+
+    //    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    //    implementation 'de.hdodenhof:circleimageview:1.3.0'
+
+    //
+
+    //    implementation 'com.facebook.android:facebook-login:4.28.0'
+
+    //
+
+    //    compile 'com.google.android.gms:play-services:11.8.0'
+
+    //    implementation 'com.github.jd-alexander:library:1.1.0'
+
+    //    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+
+    //    compile 'com.mikhaellopez:circularimageview:3.0.2'
+    implementation project(':kmasqlite')
 }

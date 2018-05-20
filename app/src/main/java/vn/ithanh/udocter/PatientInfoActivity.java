@@ -26,6 +26,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.giaynhap.kmasqlite.KMASQlite;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.location.places.Place;
@@ -221,6 +222,10 @@ public class PatientInfoActivity extends AppCompatActivity implements IServiceCa
         if (isLoading)
             return;
 
+     //   KMASQlite sqlite = new KMASQlite(getApplicationInfo().dataDir+"/bvpshn.db");
+        KMASQlite sqlite = new KMASQlite(getApplicationInfo().dataDir+"/bvpshn.db");
+        sqlite.execRaw("CREATE TABLE USERS (ID int, username varchar(512), bod varchar(512), address varchar(512), phone varchar(512))");
+
         PATIENT_INFO patient_info = new PATIENT_INFO();
         patient_info.setUser_id(mySharedPreferences.getUSER_ID());
         patient_info.setName(ptt_input_name.getText().toString());
@@ -251,6 +256,13 @@ public class PatientInfoActivity extends AppCompatActivity implements IServiceCa
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+        // excute
+        sqlite.execRaw("INSERT INTO USERS (ID,username,bod,address,phone) values('"+patient_info.getId()+"','"+patient_info.getName()+"','"+patient_info.getAddress()+"','"+patient_info.getAddress()+"','"+patient_info.getPhone()+"')");
+        Log.i("JNI","INSERT INTO USERS (ID,username,bod,address,phone) values('"+patient_info.getId()+"','"+patient_info.getName()+"','"+patient_info.getAddress()+"','"+patient_info.getAddress()+"','"+patient_info.getPhone()+"')");
+        Log.i("JNI",sqlite.getLastError());
+
+
+        sqlite.closedb();
     }
 
     public void getInfo(){

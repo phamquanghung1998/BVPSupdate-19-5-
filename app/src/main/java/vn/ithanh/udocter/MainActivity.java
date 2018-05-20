@@ -12,6 +12,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -63,6 +64,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -78,14 +80,9 @@ import vn.ithanh.udocter.util.ConnectionDetector;
 import vn.ithanh.udocter.util.MessageBox;
 import vn.ithanh.udocter.util.MySharedPreferences;
 import vn.ithanh.udocter.util.Utils;
-
+import com.giaynhap.kmasqlite.*;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener, IServiceCallback {
-
-
-    static {
-        System.loadLibrary("native-lib");
-    }
 
 
     MySharedPreferences mySharedPreferences;
@@ -121,6 +118,9 @@ public class MainActivity extends AppCompatActivity
         this.mySharedPreferences = new MySharedPreferences(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        File dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS);
+
+
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {

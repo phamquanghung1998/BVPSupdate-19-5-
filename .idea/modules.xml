@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BenhVienPhuSan-master.iml" filepath="$PROJECT_DIR$/BenhVienPhuSan-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kmasqlite/kmasqlite.iml" filepath="$PROJECT_DIR$/kmasqlite/kmasqlite.iml" />
     </modules>
   </component>
 </project>
